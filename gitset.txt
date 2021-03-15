@@ -1,0 +1,13 @@
+git config --global user.email "your@email.com"
+git config --global user.name "Your Name"
+git config --global core.autocrlf false
+
+git init
+git remote add -f origin https://github.com/Ascendsun/auto_machine.git
+git config core.sparsecheckout true
+
+echo 'subfolderName/subfolderName2' >> .git/info/sparse-checkout
+git pull origin master
+
+git push --set-upstream origin master
+
